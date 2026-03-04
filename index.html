@@ -2,94 +2,136 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>MARTES 3 DE MARZO DE 2026 POR LA NOCHE</title>
+<title>Martes 3 de Marzo 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     padding:0;
-    background: radial-gradient(circle at top, #2a003f, #120018 70%);
-    font-family: 'Playfair Display', serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    color:#ffffff;
+    font-family:'Cormorant Garamond', serif;
+    background: radial-gradient(circle at center, #1a001f 0%, #0a000d 80%);
+    overflow-x:hidden;
+    color:#fff;
 }
 
+/* Partículas románticas */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image: radial-gradient(#ffffff33 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: mover 40s linear infinite;
+    z-index:-1;
+}
+
+@keyframes mover{
+    from{transform:translateY(0);}
+    to{transform:translateY(-200px);}
+}
+
+/* Contenedor carta */
 .carta{
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(18px);
-    border-radius:30px;
-    padding:80px;
     width:85%;
     max-width:1000px;
-    box-shadow: 0 0 60px rgba(180,0,255,0.25);
-    animation: aparecer 2s ease;
+    margin:80px auto;
+    background: linear-gradient(145deg,#2a0a2f,#18001f);
+    border-radius:35px;
+    padding:90px 100px;
+    box-shadow:0 0 80px rgba(180,0,255,0.25);
+    position:relative;
 }
 
-@keyframes aparecer{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
+/* Decoración superior */
+.carta::before{
+    content:"❦";
+    position:absolute;
+    top:30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:40px;
+    opacity:0.5;
 }
 
+/* Título */
 h1{
     font-family:'Great Vibes', cursive;
-    font-size:80px;
+    font-size:90px;
     text-align:center;
-    margin-bottom:20px;
-    color:#f3d6ff;
+    margin-bottom:10px;
+    color:#f8d6ff;
+    text-shadow:0 0 25px rgba(255,150,255,0.4);
 }
 
 .fecha{
     text-align:center;
-    font-size:22px;
-    margin-bottom:50px;
+    font-size:26px;
+    margin-bottom:60px;
     opacity:0.8;
 }
 
 p{
-    font-size:28px;
-    line-height:2;
-    margin-bottom:35px;
+    font-size:32px;
+    line-height:2.1;
+    margin-bottom:45px;
     text-align:justify;
 }
 
+/* Separador elegante */
+.separador{
+    text-align:center;
+    font-size:28px;
+    margin:50px 0;
+    opacity:0.6;
+}
+
+/* Firma */
+.firma{
+    margin-top:80px;
+    text-align:right;
+    font-family:'Great Vibes', cursive;
+    font-size:55px;
+    color:#ffd6ff;
+}
+
+/* Neon morado */
 .neon-morado{
-    margin-top:70px;
-    font-size:34px;
+    margin-top:80px;
+    font-size:36px;
     text-align:center;
     color:#e0b3ff;
     text-shadow:
         0 0 10px #c04dff,
-        0 0 20px #b000ff,
-        0 0 40px #8a00ff,
+        0 0 25px #b000ff,
+        0 0 45px #8a00ff,
         0 0 80px #6a00ff;
-    animation: brilloMorado 2s infinite alternate;
+    animation: pulsoMorado 2.5s infinite alternate;
 }
 
-@keyframes brilloMorado{
-    from{opacity:0.8;}
+@keyframes pulsoMorado{
+    from{opacity:0.7;}
     to{opacity:1;}
 }
 
+/* Neon dorado */
 .neon-dorado{
-    margin-top:50px;
-    font-size:36px;
+    margin-top:60px;
+    font-size:38px;
     text-align:center;
     color:#ffd86b;
     text-shadow:
         0 0 10px #ffc400,
-        0 0 25px #ffb300,
-        0 0 50px #ff9800,
-        0 0 90px #ff6f00;
-    animation: brilloDorado 2s infinite alternate;
+        0 0 30px #ffb300,
+        0 0 60px #ff9800,
+        0 0 100px #ff6f00;
+    animation: pulsoDorado 2.5s infinite alternate;
 }
 
-@keyframes brilloDorado{
-    from{opacity:0.8;}
+@keyframes pulsoDorado{
+    from{opacity:0.7;}
     to{opacity:1;}
 }
 </style>
@@ -99,12 +141,13 @@ p{
 
 <div class="carta">
 
-<h1>Mi Amor Eterno</h1>
-
+<h1>Mi Amor Infinito</h1>
 <div class="fecha">Martes 3 de marzo de 2026 — Por la noche</div>
 
 <p><STRONG class="neon-morado">MI AMOR, MI NIÑA LINDA, MI OJITOS LINDOS</STRONG></p>
 
+    <div class="separador">❦</div>
+    
 <P>Esta noche tiene algo distinto. El martes se ha vestido de silencio suave, como si el mundo entero hubiese decidido bajar la voz para que solo se escuche lo que siento por ti. Son las horas en que el cielo se vuelve más profundo, en que las luces lejanas parecen estrellas pequeñas y todo invita a pensar en lo que verdaderamente importa… y para mí, lo único que importa eres tú.
 
 Hoy quiero escribirte sin límites. Sin medir palabras. Sin ahorrar sentimientos. Quiero que esta carta sea tan larga como mis pensamientos cuando te extraño, tan intensa como mi corazón cuando te tengo cerca, tan infinita como el amor que siento por ti.
@@ -229,10 +272,8 @@ Que sueñes conmigo… como yo sueño contigo incluso despierto. Que cada estrel
 
 Y mientras el tiempo avanza, quiero que siempre recuerdes que eres el amor de mi vida, mi razón de ser. No importa lo que suceda, siempre estaré a tu lado, amándote con cada fibra de mi ser. Eres mi todo, y no hay palabras suficientes para expresar lo agradecido que estoy de tenerte en mi vida.</p>
 
-<p>Con todo mi corazón,  
-Siempre tuyo. ❤️</p>
-    <P><STRONG class="neon-dorado">JUAN KALETH MENDOZA PRIMERA 💜</STRONG></P>
-
+<div class="separador">❦</div>
+    
 <div class="neon-morado">
 Eres la luz violeta que atraviesa mi oscuridad, un resplandor celestial que ilumina incluso los rincones más sombríos de mi ser. Eres la chispa infinita que enciende mi alma cada noche, un fuego sagrado que arde con una intensidad que desafía el tiempo y el espacio. Eres el latido eterno que convierte mi existencia en una historia escrita con fuego, deseo y un amor que jamás se apagará, un relato apasionado donde cada palabra está impregnada de la esencia de nuestro vínculo. En cada susurro del viento, en cada rayo de luna, siento cómo tu amor me envuelve, creando un universo donde solo existimos tú y yo, donde nuestros corazones laten al unísono, danzando en una melodía de pasión que resuena en el infinito. Eres mi musa, mi razón, mi todo, y cada día a tu lado es un nuevo capítulo que deseo escribir, lleno de sueños, caricias y promesas eternas.
 </div>
@@ -240,8 +281,14 @@ Eres la luz violeta que atraviesa mi oscuridad, un resplandor celestial que ilum
 <div class="neon-dorado">
 Te prometo amarte con la grandeza del sol que nunca deja de brillar, con una luz tan intensa que iluminará hasta los días más oscuros y fríos. Te prometo proteger nuestro amor con cada parte de mi ser, como un guerrero que defiende su tesoro más preciado, cuidando cada instante que compartimos y cada sueño que construimos juntos. Te elijo una y otra vez, todos los días de mi vida, como si cada amanecer fuera una nueva oportunidad para reafirmar la magia que hay entre nosotros.Incluso cuando el tiempo pase y las estaciones cambien, mi amor por ti se mantendrá firme y constante, como un faro en medio de la tormenta. Porque mi corazón ya decidió que su destino es permanecer contigo, entrelazando nuestras almas en un viaje eterno, donde cada latido es un eco de nuestra conexión inquebrantable. Te prometo que en cada paso que dé, en cada susurro del viento, en cada estrella que brille en el cielo, mi amor por ti será un faro que nunca se apagará, guiándonos hacia un futuro lleno de sueños compartidos y momentos inolvidables.
 </div>
-    
+
+<div class="firma">
+<p>Con todo mi corazón,  
+Siempre tuyo. ❤️</p>
+    <P><STRONG class="neon-dorado">JUAN KALETH MENDOZA PRIMERA 💜</STRONG></P>
+</div>
+
 </div>
 
 </body>
-</html> 
+</html>
